@@ -1,9 +1,9 @@
 var express = require('express');
 var motivations = require('motivations');
 var app = express();
-
+var pickone = require('pick-one');
 app.get('/test', function(request, response){
-	response.send(motivations);		
+	response.send(pickone(motivations));		
 });
 app.get('/', function(request, response){
 	response.send("Cha Ching");
